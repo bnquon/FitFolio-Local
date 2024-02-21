@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Nunito+Sans:ital,opsz,wght@0,6..12,500;1,6..12,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../src/css/style.css">
+</head>
+<body>
+    <div class="cardio-page" id="cardio-page">
+
+        <div class="taskbar">
+            <h1 id="fit">FITFOLIO</h1>
+            <div id="username-container">
+                <span id="greeting">Logged in as </span>
+                <span id="username"></span>
+            </div>
+            <ul id="links">
+                <li><a href="index.html"><h4>Home</h4></a></li>
+                <li><h4>About</h4></li>
+            </ul>
+        </div>
+
+        <div class="header">
+            <img id="runners" src="images/cardioHeader.jpg" alt="">
+        </div>
+
+        <div class="title">
+            <h1>Running Tracker 🏃💨</h1>
+        </div>
+
+        <div class="main-container">
+            
+            <div class="content-container">    
+                <h3 id="table-title">🏃Runs</h3>
+                <hr>
+                <div class="table-container">
+                    <table id="tracker-sheet">
+                        <tr>
+                            <th>Name</th>
+                            <th>Distance (KM)</th>
+                            <th>Time (0h00m00s)</th>
+                            <th>Avg. Pace</th>
+                            <th>Date</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="buttons">
+                    <button class='box' id="new" onclick="addRow()">New Entry</button>
+                    <button class='box' id="delete" onclick="deleteRow()">Delete Previous</button>
+                    <button class='box' id="save">Save</button>
+                </div>
+            </div>
+
+            <div id="goals">
+                <h2 id="goal-title">Goals ⏱️</h2><hr>
+                <div id="goal-container">
+
+                </div>
+                <div id="goal-btn">
+                    <button class='box' id="new" onclick="addGoal()">New Goal</button>
+                    <button class='box' id="saveGoalBtn" onclick="">Save</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../src/js/cardio.js"></script>
+</body>
+</html>

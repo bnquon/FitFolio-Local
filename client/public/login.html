@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Nunito+Sans:ital,opsz,wght@0,6..12,500;1,6..12,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/style.css">
+</head>
+<body>
+    <div class="login-page">
+
+        <h1 id="login-title">FITFOLIO</h1>
+
+        <div class="form-container">
+            <div class="overlay" id="overlay">
+                <div id="overlayMsg">
+                    <div id="loginMsg">
+                        <p><h1>Welcome Back!</h1><br><h3>If you're already a member, log in and seamlessly continue your journey by adding more to it!</h3></p>
+                    </div>
+                    <div id="signupMsg" class="hidden">
+                        <p><h1>Hello There!</h1><br><h3>Join our community and start tracking your fitness journey today. Sign up and let's make progress together! 💪🎉</h3></p>
+                    </div>
+                </div>
+                <div class="overlayBtnContainer">
+                    <button id="switchBtn"><p>Login</p></button>
+                </div>
+            </div>
+
+            <form action="index.html" class="login-form" id="login-form">
+
+                <div class="login-title">
+                    <p>Login</p>
+                </div>
+                <div class="login-fillout">
+                    <input type="text" id="usernameLogin" name="username" placeholder="Username" required>
+                    <input type="password" id="passwordLogin" placeholder="Password" required>
+                </div>
+
+                <div class="buttonContainer">
+                    <button id="loginBtn" type="submit"><p>Login</p></button>
+                </div>
+            </form>
+
+            <form action="index.html" class="signup-form" id="signup-form">
+                <div class="signup-title">
+                    <p>Create Account</p>
+                </div>
+
+                <div class="signup-fillout">
+                    <input type="text" id="usernameSignup" name="username" placeholder="Username" required>
+                    <input type="password" id="passwordSignup" placeholder="Password" required>
+                </div>
+
+                <div class="buttonContainer">
+                    <button id="signUpBtn" type="submit"><p>Create</p></button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <script src="../src/js/login.js"></script>
+</body>
+</html>

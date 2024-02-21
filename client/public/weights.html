@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weightlifting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Nunito+Sans:ital,opsz,wght@0,6..12,500;1,6..12,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../src/css/style.css">
+</head>
+<body>
+    <div class="weight-page" id="weight-page">
+
+        <div class="taskbar">
+            <h1 id="fit">FITFOLIO</h1>
+            <div id="username-container">
+                <span id="greeting">Logged in as </span>
+                <span id="username"></span>
+            </div>
+            <ul id="links">
+                <li><a href="index.html"><h4>Home</h4></a></li>
+                <li><h4>About</h4></li>
+            </ul>
+        </div>
+
+        <div class="header">
+            <img id="runners" src="images/cardioHeader.jpg" alt="">
+        </div>
+
+        <div id="content-container">
+            
+            <div id="template-container">
+                <h2 id="container-title">Templates</h2>
+                <hr>
+
+                <div id="templateContentContainer">
+                    <div class="createTemplate">
+                        <div id="template-Name">
+                            <h3>Create Template</h3>
+                            <input type="text" id="templateName">
+                        </div>
+                        <div id="templateBtnContainer">
+                            <button id="addExercise" class="box">ADD EXERCISE</button>
+                            <button id="saveExercise" class="box">SAVE TEMPLATE</button>
+                        </div>
+                        <table id="exerciseTable">
+                            <tr>
+                                <th style="width: 50%">Exercise</th>
+                                <th style="width: 25%">Sets</th>
+                                <th style="width: 25%">Reps</th>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="storeTemplate">
+                        <div id="template-Name">
+                            <h3>Stored Templates</h3>
+                        </div>
+                        <div id="templates">
+                            
+                        
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+
+            <div id="calendar-container">
+                <div id="calendar-title">
+                    
+                </div>
+                <div id="calendarBtnContainer">
+                    <button id="lastMonth">⬅️ LAST</button>
+                    <button id="nextMonth">NEXT ➡️</button>
+                </div>
+                <table id="calendar">
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </table>
+            </div>
+
+            <div id="goal-container">
+                <h2 id="container-title">Goals</h2>
+                <hr>
+                
+                <div id="goalContentContainer">
+
+                </div>
+
+                <div id="goalBtnContainer">
+                    <button id="GoalAdd" onclick="addWeightGoal()" class="box">New</button>
+                    <button id="GoalSave" class="box">Save</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="../src/js/weights.js"></script>
+</body>
+</html>

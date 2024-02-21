@@ -1,0 +1,44 @@
+https://www.w3schools.com/jsref/met_table_insertrow.asp#:~:text=The%20insertRow()%20method%20creates,method%20to%20remove%20a%20row.
+
+THIS IS WHAT HELPED ME DO THE LOGIN/SIGNUP IMPLEMENTATION AND SETUP
+https://medium.com/@prashantramnyc/a-simple-registration-and-login-backend-using-nodejs-and-mysql-967811509a64
+
+https://codingstatus.com/how-to-display-data-from-mysql-database-table-in-node-js/
+
+CHANGE THE BORDER COLOUR ON THE BUTTONS IN CARDIO
+
+https://uiverse.io/Cornerstone-04/bitter-impala-54
+https://uiverse.io/gharsh11032000/foolish-sloth-90
+
+USE THIS FOR FRONT PAGE
+https://uiverse.io/SteveBloX/short-fish-35
+
+TODO:
+-SAVE CALENDAR THATS IT PLEASE U GOT THIS
+    PLAN
+    DONE - Create SQL table to store the template Name, UserID and Date (get month + year from the Calendar title & date from the inner html)
+    DONE - Save on the calendar cell click 
+    DONE - HAVE TO DEAL WITH ALTERING THE TEMPLATE
+
+WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+need to fix the code layout and then test/add features
+
+REFORMAT THE CODE INTO THIS
+
+
+project-root/
+|\-- client/
+|   |\-- public/
+|   |   |\-- index.html
+|   |   |\-- page1.html
+|   |   |\-- page2.html
+|   |   |\-- page3.html
+|   |   |\-- images/    <-- Add this folder for images
+|   |\-- src/
+|       |\-- js/
+|       |   |\-- main.js
+|       |   |\-- page1.js
+|       |   |\-- page2.js
+|       |   |\-- page3.js
+|       |\-- css/
+|           |\-- styles.css

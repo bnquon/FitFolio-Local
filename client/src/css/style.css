@@ -1,0 +1,841 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.login-page {
+    font-family: 'Nunito Sans', sans-serif;
+    display: flex;
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-page #login-title {
+    position: absolute;
+    font-style: italic;
+    font-size: 75px;
+    top: 2.5%;
+}
+
+.login-page .form-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 55vw;
+    height: 60vh;
+    box-shadow: 5px 5px 5px black;
+}
+
+.login-page .form-container .login-form,
+.login-page .form-container .signup-form {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    overflow-y: auto;
+}
+
+.login-page .form-container #login-form {
+    opacity: 0;
+    transition: 1.5s;
+}
+
+.login-page .form-container #login-form.show {
+    opacity: 1;
+}
+
+.login-page .form-container #signup-form {
+    left: 50%;
+    opacity: 1;
+    transition: 1.5s;
+}
+
+.login-page .form-container #signup-form.show {
+    opacity: 0;
+}
+
+.login-page .form-container .login-form .login-title,
+.login-page .form-container .signup-form .signup-title {
+    font-size: 65px;
+    font-weight: 600;
+    position: absolute;
+    display: flex;
+    top: 7.5%;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.login-page .form-container .login-form .login-fillout,
+.login-page .form-container .signup-form .signup-fillout {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 60%;
+    max-height: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 20%;
+}
+
+.login-page .form-container .login-form .buttonContainer,
+.login-page .form-container .signup-form .buttonContainer {
+    position: absolute;
+    display: flex;
+    top: 80%;
+    height: 10%;
+    width: 40%;
+}
+
+.login-page .form-container .login-form #loginBtn,
+.login-page .form-container .signup-form #signUpBtn {
+    width: 100%;
+    font-weight: 600;
+    font-size: 25px;
+    transition: 500ms;
+    background-color: transparent;
+    cursor: pointer;
+    color: black;
+    border-radius: 20px;
+}
+
+.login-page .form-container .login-form #loginBtn:hover,
+.login-page .form-container .signup-form #signUpBtn:hover {
+    transform: scale(1.1);
+}
+
+
+.login-page .form-container .login-form .login-fillout input[type=text],
+.login-page .form-container .login-form .login-fillout input[type=password],
+.login-page .form-container .signup-form .signup-fillout input[type=text],
+.login-page .form-container .signup-form .signup-fillout input[type=password] {
+    font-size: 25px;
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 8px;
+    width: 90%;
+}
+
+.login-page .form-container .overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    left: 0%;
+    align-items: center;
+    overflow-y: auto;
+    transition: 500ms;
+}
+
+.login-page .form-container .overlay.show {
+    transform: translateX(100%);
+}
+
+.login-page .form-container .overlay #overlayMsg {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    top: 25%;
+    width: 85%;
+    margin-bottom: 5%;
+    color: white;
+}
+
+.login-page .form-container .overlay #overlayMsg h1 {
+    font-size: 60px;
+}
+
+.login-page .form-container .overlay #overlayMsg h3 {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.hidden {
+    display: none;
+}
+
+.login-page .form-container .overlay .overlayBtnContainer {
+    display: flex;
+    position: absolute;
+    top: 65%;
+    width: 40%;
+    height: 10%;
+}
+
+.login-page .form-container .overlay #switchBtn {
+    width: 100%;
+    font-weight: 600;
+    font-size: 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 3px 3px #fafafa;
+}
+
+.login-page .form-container .overlay #switchBtn:active {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+}
+
+.main-page {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.main-page .main-container {
+    position: absolute;
+    width: 100vw;
+    height: 82.5vh;
+    top: 7.5vh;
+}
+
+.main-page .main-container .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.main-page .main-container .image-container img {
+    width: 100%;
+    height: auto;
+}
+
+#weightBg {
+    display: none;
+}
+
+#cardioBg {
+    display: block;
+}
+
+.main-page .main-container .bio {
+    font-family: 'Nunito Sans', sans-serif;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}   
+
+.main-page .main-container .bio .intro h1{
+    font-style: italic;
+    font-size: 120px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 5%;
+}
+
+.main-page .main-container .bio .buttons {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 8%;
+}
+
+.main-page .main-container .bio .buttons button {
+    width: 80%;
+    height: 60px;
+    border: unset;
+    border-radius: 45px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: white;
+    font-size: 1.4em;
+    font-weight: 550;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .main-page .main-container .bio .buttons button:hover {
+    background: #e74c3c;
+    color: white;
+    font-size: 1.6em;
+  }
+
+.main-page .inspire-container {
+    font-family: 'Libre Baskerville', serif;
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100vw;
+    max-width: 100%;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardio-page { 
+    font-family: 'Nunito Sans', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardio-page .taskbar,
+.main-page .taskbar,
+.weight-page .taskbar {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 7.5vh;
+}
+
+.cardio-page .taskbar a,
+.main-page .taskbar a, 
+.weight-page .taskbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.cardio-page .taskbar #fit,
+.main-page .taskbar #fit,
+.weight-page .taskbar #fit {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    align-self: center;
+    font-style: italic;
+    font-size: 45px;
+}
+
+.cardio-page .taskbar #links,
+.main-page .taskbar #links,
+.weight-page .taskbar #links {
+    font-size: 25px;
+    display: flex;
+    position: absolute;
+    align-self: center;
+    list-style-type: none;
+    margin-left: 8%;
+    width: 12%;
+    justify-content: space-between;
+}
+
+.cardio-page .taskbar #username-container,
+.main-page .taskbar #username-container,
+.weight-page .taskbar #username-container {
+    position: absolute;
+    right: 0;
+    margin-right: 8%;
+    align-self: center;
+    font-size: 20px;
+}
+
+.cardio-page .header,
+.weight-page .header {
+    position: relative;
+    width: 100vw;
+    height: 20vh;
+    overflow: hidden;
+    background-color: lightcyan;
+}
+
+.cardio-page .header img {
+    position: absolute;
+    width: 100%;
+    bottom: 50%;
+    transform: translateY(31%);
+    height: auto;
+}
+
+.cardio-page .main-container {
+    position: absolute;
+    display: flex;
+    height: 65vh;
+    width: 100%;
+    bottom: 0;
+}
+
+.cardio-page .title {
+    height: 7.5vh;
+    display: flex;
+    align-items: center;
+    padding-left: 5vw;
+}
+
+.cardio-page .main-container .content-container {
+    position: relative;
+    display: flex;
+    background-color: white;
+    width: 80%;
+}
+
+.cardio-page .main-container .content-container #table-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 25px;
+}
+
+.cardio-page .main-container .content-container hr {
+    position: absolute;
+    top: 6%;
+    border: 1px solid black;
+    width: 90%;
+    margin-left: 5%;
+    height: 1px;
+}
+
+.cardio-page .main-container .content-container .table-container {
+    position: absolute;
+    width: 80%;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 70%;
+    overflow: auto;
+    border: 1px solid lightgray;
+}
+
+.cardio-page .main-container .content-container .table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cardio-page .main-container .content-container .table-container table th{
+    width: 20%;
+    font-size: 18px;
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+::placeholder {
+    color: lightgray;
+}
+
+.cardio-page .main-container .content-container .buttons {
+    border: 1px solid red;
+    position: absolute;
+    display: flex;
+    top: 85%;
+    left: 10%;
+    width: 40%;
+    justify-content: space-evenly;
+}
+
+.cardio-page .main-container .content-container .buttons button {
+    cursor: pointer;
+    max-width: 50%;
+    width: 30%;
+}
+
+.box {
+    height: auto;
+    float: left;
+    transition: .5s linear;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    margin: 0 5px;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+  
+.box:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid transparent;
+    box-sizing: border-box;
+    transform: translateX(100%);
+}
+  
+.box:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-top: 3px solid transparent;
+    border-right: 3px solid transparent;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+}
+  
+.box:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+  
+.box:hover:before {
+    border-color: #262626;
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear, .3s height linear .3s;
+}
+  
+.box:hover:after {
+    border-color: #262626;
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear, .3s height linear .5s;
+}
+
+.cardio-page .main-container #goals {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.cardio-page .main-container #goals #goal-title {
+    /* background-color: red; */
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    height: 6%;
+}
+
+.cardio-page .main-container #goals hr {
+    display: flex;
+    position: relative;
+    border: 1px solid black;
+    width: 90%;
+    left: 5%;
+}
+
+.cardio-page .main-container #goals #goal-container {
+    /* background-color: lightgray; */
+    position: relative;
+    width: 100%;
+    height: 70%;
+    text-align: center;
+    overflow: auto;
+}
+
+.cardio-page .main-container #goals #goal-container textarea:focus, input:focus{
+    outline: none;
+}
+
+.cardio-page .main-container #goals #goal-container input[type="checkbox"] {
+    width: 15px; /* Size of the checkbox */
+    height: 15px;
+}
+
+.cardio-page .main-container #goals #goal-btn {
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    top: 85%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cardio-page .main-container #goals #goal-btn button {
+    cursor: pointer;
+    width: 150px;
+    padding: 2%;
+    background-color: transparent;
+
+}
+
+.weight-page {
+    font-family: 'Nunito Sans', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.weight-page #content-container {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    top: 27.5vh;
+    height: 70vh;
+}
+
+.weight-page #content-container #container-title {
+    margin-top: 10px;
+    text-align: center;
+    height: 10%;
+}
+
+.weight-page #content-container #template-container hr,
+.weight-page #content-container #goal-container hr {
+    border: 1px solid black;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 6.5%;
+}
+
+.weight-page #content-container #template-container,
+.weight-page #content-container #goal-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.weight-page #content-container #template-container {
+    width: 23%;
+}
+
+.weight-page #content-container #goal-container {
+    width: 17%;
+}
+
+.weight-page #content-container #template-container #templateContentContainer,
+.weight-page #content-container #goal-container #goalContentContainer {
+    position: relative;
+    left: 5%;
+    width: 90%;
+    overflow-y: auto;
+}
+
+.weight-page #content-container #goal-container #goalContentContainer {
+    height: 75%;
+}
+
+.weight-page #content-container #template-container #templateContentContainer {
+    height: 80%;
+}
+
+.weight-page #content-container #goal-container #goalBtnContainer {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    bottom: 2%;
+    height: 6%;
+}
+
+.weight-page #content-container #goal-container #goalContentContainer {
+    text-align: center;
+    overflow: auto;
+}
+
+.weight-page #content-container #goal-container #goalBtnContainer button {
+    cursor: pointer;
+    max-width: 50%;
+    width: 40%;
+}
+
+.weight-page #content-container #goal-container #goalContentContainer input[type="checkbox"] {
+    width: 15px; /* Size of the checkbox */
+    height: 15px;
+}
+
+.weight-page #content-container #template-container .createTemplate {
+    position: relative;
+    text-align: center;
+    width: 90%;
+    left: 5%;
+    height: 45%;
+    max-height: 45%;
+    overflow: auto;
+}
+
+.weight-page #content-container #template-container .createTemplate #exerciseTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.weight-page #content-container #template-container .createTemplate #template-Name,
+.weight-page #content-container #template-container .storeTemplate #template-Name  {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.weight-page #content-container #template-container .createTemplate #templateName {
+    width: 55%;
+    font-size: 14px;
+    padding: 4px;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.weight-page #content-container #template-container .storeTemplate {
+    position: relative;
+    text-align: center;
+    width: 90%;
+    left: 5%;
+    height: 55%;
+    max-height: 55%;
+    overflow: auto;
+}
+
+.weight-page #content-container #template-container .storeTemplate #templates {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    overflow: auto;
+}
+
+.grid-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    height: 140px;
+    overflow: auto;
+    padding-top: 5px;
+    border-radius: 20px;
+ }
+
+.weight-page #content-container #templateContentContainer #templateBtnContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+}
+
+.weight-page #content-container #template-container #templateBtnContainer button {
+    cursor: pointer;
+    font-size: 14px;
+    max-width: 45%;
+    width: 45%;
+    padding: 3px 4px;
+}
+
+.weight-page #content-container #calendar-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-y: auto;
+    align-items: center;
+    width: 65%;
+    padding-top: 10px;
+}
+
+.weight-page #content-container #calendar-container #calendar-title {
+    font-size: 25px;
+    position: relative;
+    margin-bottom: 15px;
+
+}
+
+.weight-page #content-container #calendar-container #calendarBtnContainer {
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#calendarBtnContainer button#lastMonth,
+#calendarBtnContainer button#nextMonth {
+    cursor: pointer;
+    padding: 8px 14px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: lightgray;
+    position: relative;
+    font-weight: 1000;
+    font-size: 14px;
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+#calendarBtnContainer button#lastMonth::before,
+#calendarBtnContainer button#nextMonth::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+}
+
+#calendarBtnContainer button#lastMonth::before {
+    left: 100%;
+}
+
+#calendarBtnContainer button#nextMonth::before {
+    left: 0%;
+}
+
+#calendarBtnContainer button#lastMonth:hover,
+#calendarBtnContainer button#nextMonth:hover {
+    color: #e8e8e8;
+}
+
+#calendarBtnContainer button#lastMonth:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+#calendarBtnContainer button#nextMonth:hover::before {
+    width: 100%;
+}
+
+
+.weight-page #content-container #calendar-container #calendar {
+    position: relative;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.weight-page #content-container #calendar-container #calendar th {
+    width: 14.2857%; /* 100% / 7 columns */
+    text-align: center;
+    border: 1px solid black;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.weight-page #content-container #calendar-container #calendar td {
+    border: 1px solid black;
+    padding: 0.5%;
+}
+
+.weight-page #content-container #calendar-container #calendar tr:nth-child(even) {
+    background-color: #d8d8d8;
+}
