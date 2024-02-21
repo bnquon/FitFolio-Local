@@ -440,7 +440,6 @@
 }
 
 .cardio-page .main-container .content-container .buttons {
-    border: 1px solid red;
     position: absolute;
     display: flex;
     top: 85%;
@@ -589,6 +588,14 @@
     display: flex;
     top: 27.5vh;
     height: 70vh;
+}
+
+.weight-page .header img {
+    position: absolute;
+    width: 100%;
+    bottom: 50%;
+    transform: translateY(53%);
+    height: auto;
 }
 
 .weight-page #content-container #container-title {
